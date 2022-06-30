@@ -1,0 +1,35 @@
+# orig_data & Leave1Out
+## FBCSP + classifier
+逻辑斯蒂回归分类
+| abbr.                                     | test_score       | train_score      | params                                                                                                              |
+|-------------------------------------------|------------------|------------------|---------------------------------------------------------------------------------------------------------------------|
+| [8, 12]_4_logeuclid_6                     | 0.605 (+/-0.080) | 0.678 (+/-0.024) | {'FBCSP__band': [8, 12], 'FBCSP__k': 4, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}                     |
+| [8, 12]_4_euclid_6                        | 0.605 (+/-0.080) | 0.678 (+/-0.024) | {'FBCSP__band': [8, 12], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}                        |
+| [8, 12]_4_riemann_6                       | 0.605 (+/-0.080) | 0.678 (+/-0.024) | {'FBCSP__band': [8, 12], 'FBCSP__k': 4, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}                       |
+| [20, 24, 28, 32]_4_logeuclid_6            | 0.600 (+/-0.088) | 0.640 (+/-0.037) | {'FBCSP__band': [20, 24, 28, 32], 'FBCSP__k': 4, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}            |
+| [20, 24, 28, 32]_4_euclid_6               | 0.600 (+/-0.088) | 0.640 (+/-0.037) | {'FBCSP__band': [20, 24, 28, 32], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}               |
+| [20, 24, 28, 32]_4_riemann_6              | 0.600 (+/-0.088) | 0.640 (+/-0.037) | {'FBCSP__band': [20, 24, 28, 32], 'FBCSP__k': 4, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}              |
+| [12, 16]_4_riemann_6                      | 0.590 (+/-0.065) | 0.663 (+/-0.040) | {'FBCSP__band': [12, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}                      |
+| [12, 16]_4_logeuclid_6                    | 0.590 (+/-0.065) | 0.663 (+/-0.040) | {'FBCSP__band': [12, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}                    |
+| [12, 16]_4_euclid_6                       | 0.590 (+/-0.065) | 0.663 (+/-0.040) | {'FBCSP__band': [12, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}                       |
+| [12, 16]_2_euclid_6                       | 0.583 (+/-0.078) | 0.640 (+/-0.048) | {'FBCSP__band': [12, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}                       |
+| [12, 16]_2_logeuclid_6                    | 0.583 (+/-0.078) | 0.640 (+/-0.048) | {'FBCSP__band': [12, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}                    |
+| [12, 16]_2_riemann_6                      | 0.583 (+/-0.078) | 0.640 (+/-0.048) | {'FBCSP__band': [12, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}                      |
+| [20, 24, 28, 32]_2_riemann_6              | 0.565 (+/-0.077) | 0.615 (+/-0.031) | {'FBCSP__band': [20, 24, 28, 32], 'FBCSP__k': 2, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}              |
+| [20, 24, 28, 32]_2_logeuclid_6            | 0.565 (+/-0.077) | 0.615 (+/-0.031) | {'FBCSP__band': [20, 24, 28, 32], 'FBCSP__k': 2, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}            |
+| [20, 24, 28, 32]_2_euclid_6               | 0.565 (+/-0.077) | 0.615 (+/-0.031) | {'FBCSP__band': [20, 24, 28, 32], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}               |
+| [8, 12]_2_riemann_6                       | 0.557 (+/-0.061) | 0.645 (+/-0.018) | {'FBCSP__band': [8, 12], 'FBCSP__k': 2, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}                       |
+| [8, 12]_2_euclid_6                        | 0.557 (+/-0.061) | 0.645 (+/-0.018) | {'FBCSP__band': [8, 12], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}                        |
+| [8, 12]_2_logeuclid_6                     | 0.557 (+/-0.061) | 0.645 (+/-0.018) | {'FBCSP__band': [8, 12], 'FBCSP__k': 2, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}                     |
+| [8, 12, 16, 20, 24, 28, 32]_2_riemann_6   | 0.549 (+/-0.035) | 0.623 (+/-0.026) | {'FBCSP__band': [8, 12, 16, 20, 24, 28, 32], 'FBCSP__k': 2, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}   |
+| [8, 12, 16, 20, 24, 28, 32]_2_euclid_6    | 0.549 (+/-0.035) | 0.623 (+/-0.026) | {'FBCSP__band': [8, 12, 16, 20, 24, 28, 32], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}    |
+| [8, 12, 16, 20, 24, 28, 32]_2_logeuclid_6 | 0.549 (+/-0.035) | 0.623 (+/-0.026) | {'FBCSP__band': [8, 12, 16, 20, 24, 28, 32], 'FBCSP__k': 2, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6} |
+| [8, 12, 16, 20, 24, 28, 32]_4_logeuclid_6 | 0.546 (+/-0.040) | 0.655 (+/-0.026) | {'FBCSP__band': [8, 12, 16, 20, 24, 28, 32], 'FBCSP__k': 4, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6} |
+| [8, 12, 16, 20, 24, 28, 32]_4_riemann_6   | 0.546 (+/-0.040) | 0.655 (+/-0.026) | {'FBCSP__band': [8, 12, 16, 20, 24, 28, 32], 'FBCSP__k': 4, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}   |
+| [8, 12, 16, 20, 24, 28, 32]_4_euclid_6    | 0.546 (+/-0.040) | 0.655 (+/-0.026) | {'FBCSP__band': [8, 12, 16, 20, 24, 28, 32], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}    |
+| [8, 12, 16, 20]_2_euclid_6                | 0.525 (+/-0.028) | 0.572 (+/-0.044) | {'FBCSP__band': [8, 12, 16, 20], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}                |
+| [8, 12, 16, 20]_2_logeuclid_6             | 0.525 (+/-0.028) | 0.572 (+/-0.044) | {'FBCSP__band': [8, 12, 16, 20], 'FBCSP__k': 2, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}             |
+| [8, 12, 16, 20]_2_riemann_6               | 0.525 (+/-0.028) | 0.572 (+/-0.044) | {'FBCSP__band': [8, 12, 16, 20], 'FBCSP__k': 2, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}               |
+| [8, 12, 16, 20]_4_euclid_6                | 0.498 (+/-0.025) | 0.575 (+/-0.044) | {'FBCSP__band': [8, 12, 16, 20], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6}                |
+| [8, 12, 16, 20]_4_logeuclid_6             | 0.498 (+/-0.025) | 0.575 (+/-0.044) | {'FBCSP__band': [8, 12, 16, 20], 'FBCSP__k': 4, 'FBCSP__metric': 'logeuclid', 'FBCSP__n_components': 6}             |
+| [8, 12, 16, 20]_4_riemann_6               | 0.498 (+/-0.025) | 0.575 (+/-0.044) | {'FBCSP__band': [8, 12, 16, 20], 'FBCSP__k': 4, 'FBCSP__metric': 'riemann', 'FBCSP__n_components': 6}               |

@@ -1,0 +1,149 @@
+## CSP + classifier
+| abbr.                                     | test_score       | train_score      | params                                                                                     |
+|-------------------------------------------|------------------|------------------|--------------------------------------------------------------------------------------------|
+| logeuclid_4_SVC()                         | 0.682 (+/-0.047) | 0.714 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': SVC()}                         |
+| logeuclid_4_SVC(C=0.8)                    | 0.681 (+/-0.046) | 0.712 (+/-0.011) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': SVC(C=0.8)}                    |
+| riemann_6_SVC()                           | 0.681 (+/-0.047) | 0.737 (+/-0.012) | {'CSP__metric': 'riemann', 'CSP__nfilter': 6, 'classify': SVC()}                           |
+| riemann_7_SVC()                           | 0.680 (+/-0.048) | 0.742 (+/-0.012) | {'CSP__metric': 'riemann', 'CSP__nfilter': 7, 'classify': SVC()}                           |
+| riemann_5_SVC()                           | 0.679 (+/-0.044) | 0.730 (+/-0.011) | {'CSP__metric': 'riemann', 'CSP__nfilter': 5, 'classify': SVC()}                           |
+| riemann_4_SVC()                           | 0.678 (+/-0.048) | 0.720 (+/-0.012) | {'CSP__metric': 'riemann', 'CSP__nfilter': 4, 'classify': SVC()}                           |
+| riemann_8_SVC()                           | 0.677 (+/-0.051) | 0.751 (+/-0.012) | {'CSP__metric': 'riemann', 'CSP__nfilter': 8, 'classify': SVC()}                           |
+| logeuclid_8_SVC()                         | 0.676 (+/-0.054) | 0.743 (+/-0.016) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 8, 'classify': SVC()}                         |
+| logeuclid_5_SVC(C=0.8)                    | 0.674 (+/-0.048) | 0.718 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': SVC(C=0.8)}                    |
+| logeuclid_5_SVC()                         | 0.674 (+/-0.047) | 0.721 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': SVC()}                         |
+| logeuclid_6_SVC(C=0.8)                    | 0.671 (+/-0.048) | 0.722 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': SVC(C=0.8)}                    |
+| logeuclid_6_SVC()                         | 0.671 (+/-0.049) | 0.726 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': SVC()}                         |
+| logeuclid_7_SVC()                         | 0.669 (+/-0.053) | 0.734 (+/-0.013) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 7, 'classify': SVC()}                         |
+| riemann_5_LogisticRegression()            | 0.649 (+/-0.048) | 0.675 (+/-0.011) | {'CSP__metric': 'riemann', 'CSP__nfilter': 5, 'classify': LogisticRegression()}            |
+| euclid_8_SVC()                            | 0.649 (+/-0.048) | 0.722 (+/-0.015) | {'CSP__metric': 'euclid', 'CSP__nfilter': 8, 'classify': SVC()}                            |
+| euclid_7_SVC()                            | 0.649 (+/-0.045) | 0.713 (+/-0.017) | {'CSP__metric': 'euclid', 'CSP__nfilter': 7, 'classify': SVC()}                            |
+| riemann_6_LogisticRegression()            | 0.647 (+/-0.053) | 0.677 (+/-0.012) | {'CSP__metric': 'riemann', 'CSP__nfilter': 6, 'classify': LogisticRegression()}            |
+| riemann_8_LogisticRegression()            | 0.646 (+/-0.051) | 0.682 (+/-0.010) | {'CSP__metric': 'riemann', 'CSP__nfilter': 8, 'classify': LogisticRegression()}            |
+| logeuclid_8_LogisticRegression()          | 0.646 (+/-0.056) | 0.680 (+/-0.010) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 8, 'classify': LogisticRegression()}          |
+| logeuclid_6_LinearDiscriminantAnalysis()  | 0.645 (+/-0.048) | 0.672 (+/-0.011) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': LinearDiscriminantAnalysis()}  |
+| riemann_4_LogisticRegression()            | 0.645 (+/-0.049) | 0.670 (+/-0.010) | {'CSP__metric': 'riemann', 'CSP__nfilter': 4, 'classify': LogisticRegression()}            |
+| logeuclid_6_LogisticRegression()          | 0.645 (+/-0.049) | 0.673 (+/-0.011) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': LogisticRegression()}          |
+| riemann_7_LogisticRegression()            | 0.645 (+/-0.051) | 0.680 (+/-0.011) | {'CSP__metric': 'riemann', 'CSP__nfilter': 7, 'classify': LogisticRegression()}            |
+| logeuclid_7_LogisticRegression()          | 0.644 (+/-0.051) | 0.677 (+/-0.010) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 7, 'classify': LogisticRegression()}          |
+| logeuclid_5_LogisticRegression()          | 0.643 (+/-0.046) | 0.669 (+/-0.011) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': LogisticRegression()}          |
+| logeuclid_5_LinearDiscriminantAnalysis()  | 0.643 (+/-0.046) | 0.669 (+/-0.011) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': LinearDiscriminantAnalysis()}  |
+| euclid_6_SVC(C=0.8)                       | 0.641 (+/-0.044) | 0.699 (+/-0.016) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': SVC(C=0.8)}                       |
+| euclid_6_SVC()                            | 0.640 (+/-0.045) | 0.702 (+/-0.016) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': SVC()}                            |
+| logeuclid_4_LogisticRegression()          | 0.639 (+/-0.047) | 0.667 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': LogisticRegression()}          |
+| logeuclid_4_LinearDiscriminantAnalysis()  | 0.638 (+/-0.048) | 0.666 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': LinearDiscriminantAnalysis()}  |
+| logeuclid_4_GaussianNB(priors=[0.5, 0.5]) | 0.637 (+/-0.048) | 0.652 (+/-0.013) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': GaussianNB(priors=[0.5, 0.5])} |
+| euclid_5_SVC()                            | 0.636 (+/-0.045) | 0.684 (+/-0.014) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': SVC()}                            |
+| euclid_5_SVC(C=0.8)                       | 0.636 (+/-0.046) | 0.682 (+/-0.014) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': SVC(C=0.8)}                       |
+| logeuclid_5_GaussianNB(priors=[0.5, 0.5]) | 0.630 (+/-0.047) | 0.646 (+/-0.013) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': GaussianNB(priors=[0.5, 0.5])} |
+| logeuclid_6_GaussianNB(priors=[0.5, 0.5]) | 0.626 (+/-0.045) | 0.641 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': GaussianNB(priors=[0.5, 0.5])} |
+| euclid_4_SVC()                            | 0.614 (+/-0.049) | 0.666 (+/-0.011) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': SVC()}                            |
+| euclid_4_SVC(C=0.8)                       | 0.611 (+/-0.047) | 0.665 (+/-0.011) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': SVC(C=0.8)}                       |
+| euclid_8_LogisticRegression()             | 0.606 (+/-0.050) | 0.642 (+/-0.014) | {'CSP__metric': 'euclid', 'CSP__nfilter': 8, 'classify': LogisticRegression()}             |
+| euclid_7_LogisticRegression()             | 0.603 (+/-0.049) | 0.640 (+/-0.015) | {'CSP__metric': 'euclid', 'CSP__nfilter': 7, 'classify': LogisticRegression()}             |
+| euclid_6_LinearDiscriminantAnalysis()     | 0.597 (+/-0.055) | 0.635 (+/-0.016) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': LinearDiscriminantAnalysis()}     |
+| euclid_6_LogisticRegression()             | 0.597 (+/-0.055) | 0.635 (+/-0.016) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': LogisticRegression()}             |
+| euclid_5_LinearDiscriminantAnalysis()     | 0.596 (+/-0.052) | 0.628 (+/-0.012) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': LinearDiscriminantAnalysis()}     |
+| euclid_5_LogisticRegression()             | 0.596 (+/-0.053) | 0.628 (+/-0.012) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': LogisticRegression()}             |
+| euclid_4_LinearDiscriminantAnalysis()     | 0.594 (+/-0.049) | 0.621 (+/-0.011) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': LinearDiscriminantAnalysis()}     |
+| euclid_4_LogisticRegression()             | 0.593 (+/-0.049) | 0.622 (+/-0.011) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': LogisticRegression()}             |
+| euclid_6_GaussianNB(priors=[0.5, 0.5])    | 0.577 (+/-0.051) | 0.594 (+/-0.015) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': GaussianNB(priors=[0.5, 0.5])}    |
+| euclid_4_GaussianNB(priors=[0.5, 0.5])    | 0.571 (+/-0.051) | 0.587 (+/-0.015) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': GaussianNB(priors=[0.5, 0.5])}    |
+| euclid_5_GaussianNB(priors=[0.5, 0.5])    | 0.570 (+/-0.050) | 0.591 (+/-0.015) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': GaussianNB(priors=[0.5, 0.5])}    |
+## FBCSP + classifier
+
+| abbr.                                | test_score       | train_score      | params                                                                                                  |
+|--------------------------------------|------------------|------------------|---------------------------------------------------------------------------------------------------------|
+| 24_4_SVC()                           | 0.649 (+/-0.050) | 0.736 (+/-0.013) | {'FBCSP__k': 24, 'FBCSP__n_components': 4, 'classify': SVC()}                                           |
+| 24_6_SVC()                           | 0.649 (+/-0.050) | 0.736 (+/-0.013) | {'FBCSP__k': 24, 'FBCSP__n_components': 6, 'classify': SVC()}                                           |
+| 24_5_SVC()                           | 0.649 (+/-0.050) | 0.736 (+/-0.013) | {'FBCSP__k': 24, 'FBCSP__n_components': 5, 'classify': SVC()}                                           |
+| 24_8_SVC()                           | 0.649 (+/-0.050) | 0.736 (+/-0.013) | {'FBCSP__k': 24, 'FBCSP__n_components': 8, 'classify': SVC()}                                           |
+| 24_7_SVC()                           | 0.649 (+/-0.050) | 0.736 (+/-0.013) | {'FBCSP__k': 24, 'FBCSP__n_components': 7, 'classify': SVC()}                                           |
+| 16_5_SVC()                           | 0.648 (+/-0.052) | 0.716 (+/-0.016) | {'FBCSP__k': 16, 'FBCSP__n_components': 5, 'classify': SVC()}                                           |
+| 16_8_SVC()                           | 0.648 (+/-0.052) | 0.716 (+/-0.016) | {'FBCSP__k': 16, 'FBCSP__n_components': 8, 'classify': SVC()}                                           |
+| 16_7_SVC()                           | 0.648 (+/-0.052) | 0.716 (+/-0.016) | {'FBCSP__k': 16, 'FBCSP__n_components': 7, 'classify': SVC()}                                           |
+| 16_6_SVC()                           | 0.648 (+/-0.052) | 0.716 (+/-0.016) | {'FBCSP__k': 16, 'FBCSP__n_components': 6, 'classify': SVC()}                                           |
+| 16_4_SVC()                           | 0.648 (+/-0.052) | 0.716 (+/-0.016) | {'FBCSP__k': 16, 'FBCSP__n_components': 4, 'classify': SVC()}                                           |
+| 8_4_SVC()                            | 0.640 (+/-0.057) | 0.682 (+/-0.018) | {'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}                                            |
+| 8_6_SVC()                            | 0.640 (+/-0.057) | 0.682 (+/-0.018) | {'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}                                            |
+| 8_8_SVC()                            | 0.640 (+/-0.057) | 0.682 (+/-0.018) | {'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}                                            |
+| 8_5_SVC()                            | 0.640 (+/-0.057) | 0.682 (+/-0.018) | {'FBCSP__k': 8, 'FBCSP__n_components': 5, 'classify': SVC()}                                            |
+| 8_7_SVC()                            | 0.640 (+/-0.057) | 0.682 (+/-0.018) | {'FBCSP__k': 8, 'FBCSP__n_components': 7, 'classify': SVC()}                                            |
+| 24_7_LogisticRegression()            | 0.627 (+/-0.053) | 0.672 (+/-0.014) | {'FBCSP__k': 24, 'FBCSP__n_components': 7, 'classify': LogisticRegression()}                            |
+| 24_4_LogisticRegression()            | 0.627 (+/-0.053) | 0.672 (+/-0.014) | {'FBCSP__k': 24, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}                            |
+| 24_8_LogisticRegression()            | 0.627 (+/-0.053) | 0.672 (+/-0.014) | {'FBCSP__k': 24, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}                            |
+| 24_5_LogisticRegression()            | 0.627 (+/-0.053) | 0.672 (+/-0.014) | {'FBCSP__k': 24, 'FBCSP__n_components': 5, 'classify': LogisticRegression()}                            |
+| 24_6_LogisticRegression()            | 0.627 (+/-0.053) | 0.672 (+/-0.014) | {'FBCSP__k': 24, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}                            |
+| [8, 32]_4_6_SVC()                    | 0.626 (+/-0.048) | 0.674 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC()}                    |
+| [8, 32]_4_4_SVC()                    | 0.626 (+/-0.048) | 0.674 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC()}                    |
+| [8, 32]_4_8_SVC()                    | 0.626 (+/-0.048) | 0.674 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC()}                    |
+| 16_5_LogisticRegression()            | 0.624 (+/-0.051) | 0.657 (+/-0.017) | {'FBCSP__k': 16, 'FBCSP__n_components': 5, 'classify': LogisticRegression()}                            |
+| 16_6_LogisticRegression()            | 0.624 (+/-0.051) | 0.657 (+/-0.017) | {'FBCSP__k': 16, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}                            |
+| 16_8_LogisticRegression()            | 0.624 (+/-0.051) | 0.657 (+/-0.017) | {'FBCSP__k': 16, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}                            |
+| 16_4_LogisticRegression()            | 0.624 (+/-0.051) | 0.657 (+/-0.017) | {'FBCSP__k': 16, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}                            |
+| 16_7_LogisticRegression()            | 0.624 (+/-0.051) | 0.657 (+/-0.017) | {'FBCSP__k': 16, 'FBCSP__n_components': 7, 'classify': LogisticRegression()}                            |
+| 8_4_LogisticRegression()             | 0.617 (+/-0.053) | 0.636 (+/-0.020) | {'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}                             |
+| 8_8_LogisticRegression()             | 0.617 (+/-0.053) | 0.636 (+/-0.020) | {'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}                             |
+| 8_7_LogisticRegression()             | 0.617 (+/-0.053) | 0.636 (+/-0.020) | {'FBCSP__k': 8, 'FBCSP__n_components': 7, 'classify': LogisticRegression()}                             |
+| 8_6_LogisticRegression()             | 0.617 (+/-0.053) | 0.636 (+/-0.020) | {'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}                             |
+| 8_5_LogisticRegression()             | 0.617 (+/-0.053) | 0.636 (+/-0.020) | {'FBCSP__k': 8, 'FBCSP__n_components': 5, 'classify': LogisticRegression()}                             |
+| [8, 32]_4_8_SVC(kernel='poly')       | 0.617 (+/-0.051) | 0.653 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_4_6_SVC(kernel='poly')       | 0.617 (+/-0.051) | 0.653 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_4_4_SVC(kernel='poly')       | 0.617 (+/-0.051) | 0.653 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}       |
+| [8, 20, 32]_8_8_SVC()                | 0.617 (+/-0.057) | 0.670 (+/-0.017) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| [8, 20, 32]_8_6_SVC()                | 0.617 (+/-0.057) | 0.670 (+/-0.017) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| [8, 20, 32]_8_4_SVC()                | 0.617 (+/-0.057) | 0.670 (+/-0.017) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| [8, 32]_2_8_SVC(kernel='poly')       | 0.608 (+/-0.042) | 0.613 (+/-0.019) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_2_4_SVC(kernel='poly')       | 0.608 (+/-0.042) | 0.613 (+/-0.019) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_2_6_SVC(kernel='poly')       | 0.608 (+/-0.042) | 0.613 (+/-0.019) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}       |
+| [8, 20, 32]_8_6_SVC(kernel='poly')   | 0.605 (+/-0.061) | 0.661 (+/-0.017) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_8_4_SVC(kernel='poly')   | 0.605 (+/-0.061) | 0.661 (+/-0.017) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_8_8_SVC(kernel='poly')   | 0.605 (+/-0.061) | 0.661 (+/-0.017) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}   |
+| [8, 32]_4_8_LogisticRegression()     | 0.602 (+/-0.050) | 0.628 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}     |
+| [8, 32]_4_6_LogisticRegression()     | 0.602 (+/-0.050) | 0.628 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}     |
+| [8, 32]_4_4_LogisticRegression()     | 0.602 (+/-0.050) | 0.628 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}     |
+| [8, 32]_2_6_SVC()                    | 0.598 (+/-0.048) | 0.626 (+/-0.015) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC()}                    |
+| [8, 32]_2_8_SVC()                    | 0.598 (+/-0.048) | 0.626 (+/-0.015) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC()}                    |
+| [8, 32]_2_4_SVC()                    | 0.598 (+/-0.048) | 0.626 (+/-0.015) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC()}                    |
+| [8, 20, 32]_8_6_LogisticRegression() | 0.595 (+/-0.062) | 0.625 (+/-0.021) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| [8, 20, 32]_8_4_LogisticRegression() | 0.595 (+/-0.062) | 0.625 (+/-0.021) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| [8, 20, 32]_8_8_LogisticRegression() | 0.595 (+/-0.062) | 0.625 (+/-0.021) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| [8, 20, 32]_4_4_SVC()                | 0.592 (+/-0.063) | 0.640 (+/-0.025) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| [8, 20, 32]_4_6_SVC()                | 0.592 (+/-0.063) | 0.640 (+/-0.025) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| [8, 20, 32]_4_8_SVC()                | 0.592 (+/-0.063) | 0.640 (+/-0.025) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| [8, 32]_2_4_LogisticRegression()     | 0.584 (+/-0.047) | 0.603 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}     |
+| [8, 32]_2_6_LogisticRegression()     | 0.584 (+/-0.047) | 0.603 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}     |
+| [8, 32]_2_8_LogisticRegression()     | 0.584 (+/-0.047) | 0.603 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}     |
+| [8, 20, 32]_4_8_LogisticRegression() | 0.576 (+/-0.065) | 0.605 (+/-0.025) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| [8, 20, 32]_4_4_LogisticRegression() | 0.576 (+/-0.065) | 0.605 (+/-0.025) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| [8, 20, 32]_4_6_LogisticRegression() | 0.576 (+/-0.065) | 0.605 (+/-0.025) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| [8, 20, 32]_4_4_SVC(kernel='poly')   | 0.573 (+/-0.060) | 0.609 (+/-0.023) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_4_8_SVC(kernel='poly')   | 0.573 (+/-0.060) | 0.609 (+/-0.023) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_4_6_SVC(kernel='poly')   | 0.573 (+/-0.060) | 0.609 (+/-0.023) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_2_6_SVC()                | 0.553 (+/-0.065) | 0.594 (+/-0.026) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| [8, 20, 32]_2_8_SVC()                | 0.553 (+/-0.065) | 0.594 (+/-0.026) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| [8, 20, 32]_2_4_SVC()                | 0.553 (+/-0.065) | 0.594 (+/-0.026) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| [8, 20, 32]_2_8_LogisticRegression() | 0.551 (+/-0.067) | 0.570 (+/-0.041) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| [8, 20, 32]_2_6_LogisticRegression() | 0.551 (+/-0.067) | 0.570 (+/-0.041) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| [8, 20, 32]_2_4_LogisticRegression() | 0.551 (+/-0.067) | 0.570 (+/-0.041) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| [8, 20, 32]_2_4_SVC(kernel='poly')   | 0.539 (+/-0.053) | 0.559 (+/-0.038) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_2_6_SVC(kernel='poly')   | 0.539 (+/-0.053) | 0.559 (+/-0.038) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_2_8_SVC(kernel='poly')   | 0.539 (+/-0.053) | 0.559 (+/-0.038) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}   |
+| 32_4_LogisticRegression()            | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}                            |
+| 32_4_SVC()                           | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 4, 'classify': SVC()}                                           |
+| 32_8_SVC()                           | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 8, 'classify': SVC()}                                           |
+| 32_5_LogisticRegression()            | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 5, 'classify': LogisticRegression()}                            |
+| 32_5_SVC()                           | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 5, 'classify': SVC()}                                           |
+| 32_8_LogisticRegression()            | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}                            |
+| 32_6_LogisticRegression()            | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}                            |
+| 32_7_SVC()                           | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 7, 'classify': SVC()}                                           |
+| [8, 32]_8_8_SVC(kernel='poly')       | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_8_4_SVC()                    | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}                    |
+| [8, 32]_8_4_LogisticRegression()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}     |
+| [8, 32]_8_4_SVC(kernel='poly')       | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_8_6_SVC()                    | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}                    |
+| [8, 32]_8_6_LogisticRegression()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}     |
+| [8, 32]_8_6_SVC(kernel='poly')       | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_8_8_SVC()                    | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}                    |
+| [8, 32]_8_8_LogisticRegression()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}     |
+| 32_7_LogisticRegression()            | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 7, 'classify': LogisticRegression()}                            |
+| 32_6_SVC()                           | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 6, 'classify': SVC()}                                           |

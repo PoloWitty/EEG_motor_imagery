@@ -1,0 +1,4 @@
+MDM Classification accuracy: 0.542500 / Chance level: 0.500000
+Tangent space Classification accuracy: 0.508750 / Chance level: 0.500000
+CSP + LDA Classification accuracy: 0.533750+/-0.086485 / Chance level: 0.500000
+FBCSP + LDA Classification accuracy: 0.570000+/-0.046233 / Chance level: 0.500000

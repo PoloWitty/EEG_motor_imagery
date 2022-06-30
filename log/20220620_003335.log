@@ -1,0 +1,7 @@
+Tangent space Classification accuracy: 0.671125 / Chance level: 0.500000
+
+clf = make_pipeline(
+    FGDA(),
+    TangentSpace(metric="riemann"),
+    SVC()
+)

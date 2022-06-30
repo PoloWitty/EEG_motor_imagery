@@ -1,0 +1,16 @@
+## FBCSP + classifier
+
+| abbr.                 | test_score       | train_score      | params                                                                                   |
+|-----------------------|------------------|------------------|------------------------------------------------------------------------------------------|
+| [8, 32]_4_4_SVC()     | 0.802 (+/-0.086) | 0.857 (+/-0.012) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC()}     |
+| [8, 32]_4_6_SVC()     | 0.802 (+/-0.086) | 0.857 (+/-0.012) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC()}     |
+| [8, 32]_4_8_SVC()     | 0.802 (+/-0.086) | 0.857 (+/-0.012) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC()}     |
+| [8, 20, 32]_8_4_SVC() | 0.776 (+/-0.086) | 0.843 (+/-0.023) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()} |
+| [8, 20, 32]_8_6_SVC() | 0.776 (+/-0.086) | 0.843 (+/-0.023) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()} |
+| [8, 20, 32]_8_8_SVC() | 0.776 (+/-0.086) | 0.843 (+/-0.023) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()} |
+| [8, 20, 32]_4_4_SVC() | 0.765 (+/-0.084) | 0.812 (+/-0.019) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC()} |
+| [8, 20, 32]_4_6_SVC() | 0.765 (+/-0.084) | 0.812 (+/-0.019) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC()} |
+| [8, 20, 32]_4_8_SVC() | 0.765 (+/-0.084) | 0.812 (+/-0.019) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC()} |
+| [8, 32]_8_4_SVC()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}     |
+| [8, 32]_8_6_SVC()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}     |
+| [8, 32]_8_8_SVC()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}     |

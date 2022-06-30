@@ -1,0 +1,24 @@
+# orig_data & Leave1Out
+## Bagging FBCSP clf
+| abbr.   | test_score       | train_score      | params   |
+|---------|------------------|------------------|----------|
+| Pipeline(steps=[('reshape', Reshape()),
+                ('fbcsp',
+                 FBCSP(band=[8, 12, 16], fs=250, k='all', metric='euclid',
+                       n_components=6)),
+                ('svc', SVC(C=0.5))])         | 0.620 (+/-0.106) | 0.771 (+/-0.024) | {'base_estimator': Pipeline(steps=[('reshape', Reshape()),
+                ('fbcsp',
+                 FBCSP(band=[8, 12, 16], fs=250, k='all', metric='euclid',
+                       n_components=6)),
+                ('svc', SVC(C=0.5))])}          |
+| Pipeline(steps=[('reshape', Reshape()),
+                ('fbcsp',
+                 FBCSP(band=[8, 12, 16], fs=250, metric='euclid',
+                       n_components=6)),
+                ('randomforestclassifier',
+                 RandomForestClassifier(max_depth=5, n_estimators=10))])         | 0.619 (+/-0.106) | 0.860 (+/-0.021) | {'base_estimator': Pipeline(steps=[('reshape', Reshape()),
+                ('fbcsp',
+                 FBCSP(band=[8, 12, 16], fs=250, metric='euclid',
+                       n_components=6)),
+                ('randomforestclassifier',
+                 RandomForestClassifier(max_depth=5, n_estimators=10))])}          |

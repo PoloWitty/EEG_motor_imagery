@@ -1,0 +1,34 @@
+# ra & Leave1Out
+## CSP + classifier
+| abbr.                            | test_score       | train_score      | params                                                                            |
+|----------------------------------|------------------|------------------|-----------------------------------------------------------------------------------|
+| riemann_5_LogisticRegression()   | 0.614 (+/-0.105) | 0.687 (+/-0.028) | {'CSP__metric': 'riemann', 'CSP__nfilter': 5, 'classify': LogisticRegression()}   |
+| riemann_4_SVC()                  | 0.612 (+/-0.088) | 0.721 (+/-0.035) | {'CSP__metric': 'riemann', 'CSP__nfilter': 4, 'classify': SVC()}                  |
+| logeuclid_5_LogisticRegression() | 0.610 (+/-0.104) | 0.686 (+/-0.029) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': LogisticRegression()} |
+| riemann_4_LogisticRegression()   | 0.607 (+/-0.105) | 0.691 (+/-0.026) | {'CSP__metric': 'riemann', 'CSP__nfilter': 4, 'classify': LogisticRegression()}   |
+| logeuclid_5_SVC()                | 0.606 (+/-0.090) | 0.722 (+/-0.034) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': SVC()}                |
+| logeuclid_4_LogisticRegression() | 0.605 (+/-0.101) | 0.692 (+/-0.025) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': LogisticRegression()} |
+| logeuclid_4_SVC()                | 0.605 (+/-0.082) | 0.721 (+/-0.036) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': SVC()}                |
+| euclid_5_LogisticRegression()    | 0.604 (+/-0.117) | 0.656 (+/-0.035) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': LogisticRegression()}    |
+| riemann_5_SVC()                  | 0.603 (+/-0.093) | 0.725 (+/-0.033) | {'CSP__metric': 'riemann', 'CSP__nfilter': 5, 'classify': SVC()}                  |
+| euclid_6_LogisticRegression()    | 0.597 (+/-0.126) | 0.675 (+/-0.013) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': LogisticRegression()}    |
+| riemann_8_LogisticRegression()   | 0.595 (+/-0.074) | 0.726 (+/-0.014) | {'CSP__metric': 'riemann', 'CSP__nfilter': 8, 'classify': LogisticRegression()}   |
+| logeuclid_8_LogisticRegression() | 0.593 (+/-0.079) | 0.727 (+/-0.015) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 8, 'classify': LogisticRegression()} |
+| euclid_7_LogisticRegression()    | 0.591 (+/-0.116) | 0.671 (+/-0.012) | {'CSP__metric': 'euclid', 'CSP__nfilter': 7, 'classify': LogisticRegression()}    |
+| euclid_8_LogisticRegression()    | 0.591 (+/-0.115) | 0.683 (+/-0.019) | {'CSP__metric': 'euclid', 'CSP__nfilter': 8, 'classify': LogisticRegression()}    |
+| logeuclid_6_LogisticRegression() | 0.591 (+/-0.080) | 0.706 (+/-0.028) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': LogisticRegression()} |
+| riemann_6_LogisticRegression()   | 0.591 (+/-0.080) | 0.704 (+/-0.028) | {'CSP__metric': 'riemann', 'CSP__nfilter': 6, 'classify': LogisticRegression()}   |
+| euclid_5_SVC()                   | 0.591 (+/-0.096) | 0.700 (+/-0.021) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': SVC()}                   |
+| euclid_6_SVC()                   | 0.584 (+/-0.102) | 0.708 (+/-0.016) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': SVC()}                   |
+| euclid_8_SVC()                   | 0.583 (+/-0.088) | 0.732 (+/-0.021) | {'CSP__metric': 'euclid', 'CSP__nfilter': 8, 'classify': SVC()}                   |
+| logeuclid_6_SVC()                | 0.580 (+/-0.073) | 0.734 (+/-0.026) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': SVC()}                |
+| euclid_7_SVC()                   | 0.580 (+/-0.098) | 0.722 (+/-0.014) | {'CSP__metric': 'euclid', 'CSP__nfilter': 7, 'classify': SVC()}                   |
+| logeuclid_8_SVC()                | 0.579 (+/-0.071) | 0.762 (+/-0.012) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 8, 'classify': SVC()}                |
+| euclid_4_SVC()                   | 0.579 (+/-0.100) | 0.673 (+/-0.030) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': SVC()}                   |
+| riemann_7_LogisticRegression()   | 0.576 (+/-0.076) | 0.718 (+/-0.020) | {'CSP__metric': 'riemann', 'CSP__nfilter': 7, 'classify': LogisticRegression()}   |
+| riemann_6_SVC()                  | 0.576 (+/-0.074) | 0.736 (+/-0.024) | {'CSP__metric': 'riemann', 'CSP__nfilter': 6, 'classify': SVC()}                  |
+| riemann_8_SVC()                  | 0.576 (+/-0.071) | 0.762 (+/-0.013) | {'CSP__metric': 'riemann', 'CSP__nfilter': 8, 'classify': SVC()}                  |
+| logeuclid_7_LogisticRegression() | 0.574 (+/-0.074) | 0.720 (+/-0.019) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 7, 'classify': LogisticRegression()} |
+| euclid_4_LogisticRegression()    | 0.571 (+/-0.110) | 0.649 (+/-0.040) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': LogisticRegression()}    |
+| riemann_7_SVC()                  | 0.569 (+/-0.070) | 0.753 (+/-0.011) | {'CSP__metric': 'riemann', 'CSP__nfilter': 7, 'classify': SVC()}                  |
+| logeuclid_7_SVC()                | 0.568 (+/-0.068) | 0.753 (+/-0.010) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 7, 'classify': SVC()}                |

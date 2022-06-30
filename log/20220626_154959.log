@@ -1,0 +1,29 @@
+# orig_data & Leave1Out
+## FBCSP + classifier
+
+| abbr.                                       | test_score       | train_score      | params                                                                                                                               |
+|---------------------------------------------|------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| [8, 12, 16]_8_euclid_6_SVC(C=0.5)           | 0.650 (+/-0.131) | 0.740 (+/-0.014) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)}             |
+| [8, 12, 16]_all_euclid_6_SVC(C=0.5)         | 0.650 (+/-0.131) | 0.740 (+/-0.014) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)}         |
+| [8, 12, 16]_all_euclid_6_SVC(C=0.3)         | 0.649 (+/-0.132) | 0.734 (+/-0.016) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)}         |
+| [8, 12, 16]_8_euclid_6_SVC(C=0.3)           | 0.649 (+/-0.132) | 0.734 (+/-0.016) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)}             |
+| [8, 12, 16]_all_euclid_6_SVC(C=0.8)         | 0.646 (+/-0.130) | 0.745 (+/-0.016) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)}         |
+| [8, 12, 16]_8_euclid_6_SVC(C=0.8)           | 0.646 (+/-0.130) | 0.745 (+/-0.016) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)}             |
+| [8, 12, 16]_4_euclid_6_SVC(C=0.3)           | 0.634 (+/-0.116) | 0.696 (+/-0.042) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)}             |
+| [8, 12, 16]_4_euclid_6_SVC(C=0.5)           | 0.626 (+/-0.105) | 0.703 (+/-0.044) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)}             |
+| [8, 12, 16]_2_euclid_6_SVC(C=0.8)           | 0.623 (+/-0.097) | 0.666 (+/-0.055) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)}             |
+| [8, 12, 16]_4_euclid_6_SVC(C=0.8)           | 0.620 (+/-0.098) | 0.709 (+/-0.044) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)}             |
+| [8, 12, 16]_2_euclid_6_SVC(C=0.5)           | 0.618 (+/-0.092) | 0.663 (+/-0.056) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)}             |
+| [8, 12, 16]_2_euclid_6_SVC(C=0.3)           | 0.616 (+/-0.093) | 0.662 (+/-0.056) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)}             |
+| [8, 10, 12, 14, 16]_all_euclid_6_SVC(C=0.3) | 0.568 (+/-0.061) | 0.684 (+/-0.030) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)} |
+| [8, 10, 12, 14, 16]_all_euclid_6_SVC(C=0.5) | 0.561 (+/-0.054) | 0.711 (+/-0.033) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)} |
+| [8, 10, 12, 14, 16]_8_euclid_6_SVC(C=0.3)   | 0.560 (+/-0.079) | 0.646 (+/-0.029) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)}     |
+| [8, 10, 12, 14, 16]_all_euclid_6_SVC(C=0.8) | 0.547 (+/-0.056) | 0.740 (+/-0.033) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)} |
+| [8, 10, 12, 14, 16]_8_euclid_6_SVC(C=0.5)   | 0.545 (+/-0.080) | 0.662 (+/-0.027) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)}     |
+| [8, 10, 12, 14, 16]_8_euclid_6_SVC(C=0.8)   | 0.529 (+/-0.084) | 0.677 (+/-0.027) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)}     |
+| [8, 10, 12, 14, 16]_2_euclid_6_SVC(C=0.3)   | 0.525 (+/-0.041) | 0.594 (+/-0.031) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)}     |
+| [8, 10, 12, 14, 16]_2_euclid_6_SVC(C=0.8)   | 0.518 (+/-0.037) | 0.599 (+/-0.027) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)}     |
+| [8, 10, 12, 14, 16]_2_euclid_6_SVC(C=0.5)   | 0.514 (+/-0.041) | 0.597 (+/-0.026) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)}     |
+| [8, 10, 12, 14, 16]_4_euclid_6_SVC(C=0.3)   | 0.504 (+/-0.043) | 0.624 (+/-0.032) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.3)}     |
+| [8, 10, 12, 14, 16]_4_euclid_6_SVC(C=0.5)   | 0.499 (+/-0.045) | 0.635 (+/-0.028) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.5)}     |
+| [8, 10, 12, 14, 16]_4_euclid_6_SVC(C=0.8)   | 0.490 (+/-0.038) | 0.641 (+/-0.029) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': SVC(C=0.8)}     |

@@ -1,0 +1,5 @@
+# orig_data & Leave1Out
+## Bagging FBCSP clf
+|   abbr. | test_score       | train_score      | params                        |
+|---------|------------------|------------------|-------------------------------|
+|       4 | 0.622 (+/-0.110) | 0.798 (+/-0.013) | {'0__fbcsp__n_components': 4} |

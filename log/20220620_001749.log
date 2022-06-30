@@ -1,0 +1,5 @@
+## tangentSpace mapping
+| abbr.   | test_score       | train_score      | params                       |
+|---------|------------------|------------------|------------------------------|
+| rbf     | 0.743 (+/-0.050) | 0.912 (+/-0.005) | {'classify__kernel': 'rbf'}  |
+| poly    | 0.727 (+/-0.050) | 0.923 (+/-0.005) | {'classify__kernel': 'poly'} |

@@ -1,0 +1,13 @@
+# orig_data & Leave1Out
+## FBCSP + classifier
+
+| abbr.                                                     | test_score       | train_score      | params                                                                                                                                             |
+|-----------------------------------------------------------|------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| [8, 12, 16]_8_euclid_6_RandomForestClassifier()           | 0.642 (+/-0.105) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()}             |
+| [8, 12, 16]_all_euclid_6_RandomForestClassifier()         | 0.634 (+/-0.113) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()}         |
+| [8, 12, 16]_4_euclid_6_RandomForestClassifier()           | 0.604 (+/-0.076) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()}             |
+| [8, 12, 16]_2_euclid_6_RandomForestClassifier()           | 0.566 (+/-0.052) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 12, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()}             |
+| [8, 10, 12, 14, 16]_all_euclid_6_RandomForestClassifier() | 0.524 (+/-0.049) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 'all', 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()} |
+| [8, 10, 12, 14, 16]_2_euclid_6_RandomForestClassifier()   | 0.504 (+/-0.034) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 2, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()}     |
+| [8, 10, 12, 14, 16]_4_euclid_6_RandomForestClassifier()   | 0.491 (+/-0.040) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 4, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()}     |
+| [8, 10, 12, 14, 16]_8_euclid_6_RandomForestClassifier()   | 0.490 (+/-0.055) | 1.000 (+/-0.000) | {'FBCSP__band': [8, 10, 12, 14, 16], 'FBCSP__k': 8, 'FBCSP__metric': 'euclid', 'FBCSP__n_components': 6, 'classify': RandomForestClassifier()}     |

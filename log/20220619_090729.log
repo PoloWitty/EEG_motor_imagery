@@ -1,0 +1,43 @@
+## FBCSP + classifier
+| abbr.                     |   mean_test_score |   std_test_score | params                                                                       |
+|---------------------------|-------------------|------------------|------------------------------------------------------------------------------|
+| 24_8_SVC()                |            0.6665 |        0.0954083 | {'FBCSP__k': 24, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| 24_4_SVC()                |            0.6665 |        0.0954083 | {'FBCSP__k': 24, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| 24_6_SVC()                |            0.6665 |        0.0954083 | {'FBCSP__k': 24, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| 24_7_SVC()                |            0.6665 |        0.0954083 | {'FBCSP__k': 24, 'FBCSP__n_components': 7, 'classify': SVC()}                |
+| 24_5_SVC()                |            0.6665 |        0.0954083 | {'FBCSP__k': 24, 'FBCSP__n_components': 5, 'classify': SVC()}                |
+| 16_8_SVC()                |            0.6485 |        0.101108  | {'FBCSP__k': 16, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| 16_7_SVC()                |            0.6485 |        0.101108  | {'FBCSP__k': 16, 'FBCSP__n_components': 7, 'classify': SVC()}                |
+| 16_6_SVC()                |            0.6485 |        0.101108  | {'FBCSP__k': 16, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| 16_5_SVC()                |            0.6485 |        0.101108  | {'FBCSP__k': 16, 'FBCSP__n_components': 5, 'classify': SVC()}                |
+| 16_4_SVC()                |            0.6485 |        0.101108  | {'FBCSP__k': 16, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| 24_5_LogisticRegression() |            0.647  |        0.10095   | {'FBCSP__k': 24, 'FBCSP__n_components': 5, 'classify': LogisticRegression()} |
+| 24_4_LogisticRegression() |            0.647  |        0.10095   | {'FBCSP__k': 24, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| 24_6_LogisticRegression() |            0.647  |        0.10095   | {'FBCSP__k': 24, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| 24_7_LogisticRegression() |            0.647  |        0.10095   | {'FBCSP__k': 24, 'FBCSP__n_components': 7, 'classify': LogisticRegression()} |
+| 24_8_LogisticRegression() |            0.647  |        0.10095   | {'FBCSP__k': 24, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| 8_8_SVC()                 |            0.632  |        0.11435   | {'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}                 |
+| 8_7_SVC()                 |            0.632  |        0.11435   | {'FBCSP__k': 8, 'FBCSP__n_components': 7, 'classify': SVC()}                 |
+| 8_6_SVC()                 |            0.632  |        0.11435   | {'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}                 |
+| 8_5_SVC()                 |            0.632  |        0.11435   | {'FBCSP__k': 8, 'FBCSP__n_components': 5, 'classify': SVC()}                 |
+| 8_4_SVC()                 |            0.632  |        0.11435   | {'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}                 |
+| 16_6_LogisticRegression() |            0.6315 |        0.10091   | {'FBCSP__k': 16, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| 16_7_LogisticRegression() |            0.6315 |        0.10091   | {'FBCSP__k': 16, 'FBCSP__n_components': 7, 'classify': LogisticRegression()} |
+| 16_8_LogisticRegression() |            0.6315 |        0.10091   | {'FBCSP__k': 16, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| 16_4_LogisticRegression() |            0.6315 |        0.10091   | {'FBCSP__k': 16, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| 16_5_LogisticRegression() |            0.6315 |        0.10091   | {'FBCSP__k': 16, 'FBCSP__n_components': 5, 'classify': LogisticRegression()} |
+| 8_4_LogisticRegression()  |            0.618  |        0.116086  | {'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}  |
+| 8_8_LogisticRegression()  |            0.618  |        0.116086  | {'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}  |
+| 8_7_LogisticRegression()  |            0.618  |        0.116086  | {'FBCSP__k': 8, 'FBCSP__n_components': 7, 'classify': LogisticRegression()}  |
+| 8_6_LogisticRegression()  |            0.618  |        0.116086  | {'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}  |
+| 8_5_LogisticRegression()  |            0.618  |        0.116086  | {'FBCSP__k': 8, 'FBCSP__n_components': 5, 'classify': LogisticRegression()}  |
+| 32_4_LogisticRegression() |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| 32_4_SVC()                |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| 32_5_LogisticRegression() |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 5, 'classify': LogisticRegression()} |
+| 32_5_SVC()                |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 5, 'classify': SVC()}                |
+| 32_6_LogisticRegression() |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| 32_6_SVC()                |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| 32_7_LogisticRegression() |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 7, 'classify': LogisticRegression()} |
+| 32_7_SVC()                |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 7, 'classify': SVC()}                |
+| 32_8_LogisticRegression() |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| 32_8_SVC()                |          nan      |      nan         | {'FBCSP__k': 32, 'FBCSP__n_components': 8, 'classify': SVC()}                |

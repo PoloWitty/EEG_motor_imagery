@@ -1,0 +1,8 @@
+# ea & Leave1Out
+only use the 200 head time
+## CSP + classifier
+| abbr.                  | test_score       | train_score      | params                                                                  |
+|------------------------|------------------|------------------|-------------------------------------------------------------------------|
+| euclid_6_SVC(C=0.5)    | 0.610 (+/-0.100) | 0.733 (+/-0.023) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': SVC(C=0.5)}    |
+| riemann_6_SVC(C=0.5)   | 0.599 (+/-0.085) | 0.743 (+/-0.026) | {'CSP__metric': 'riemann', 'CSP__nfilter': 6, 'classify': SVC(C=0.5)}   |
+| logeuclid_6_SVC(C=0.5) | 0.597 (+/-0.086) | 0.741 (+/-0.030) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': SVC(C=0.5)} |

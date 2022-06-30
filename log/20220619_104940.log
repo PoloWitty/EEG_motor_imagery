@@ -1,0 +1,58 @@
+## FBCSP + classifier
+
+| abbr.                                | test_score       | train_score      | params                                                                                                  |
+|--------------------------------------|------------------|------------------|---------------------------------------------------------------------------------------------------------|
+| [8, 32]_4_8_SVC(kernel='poly')       | 0.816 (+/-0.092) | 0.865 (+/-0.016) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_4_6_SVC(kernel='poly')       | 0.816 (+/-0.092) | 0.865 (+/-0.016) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_4_4_SVC(kernel='poly')       | 0.816 (+/-0.092) | 0.865 (+/-0.016) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_4_8_SVC()                    | 0.807 (+/-0.098) | 0.857 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC()}                    |
+| [8, 32]_4_6_SVC()                    | 0.807 (+/-0.098) | 0.857 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC()}                    |
+| [8, 32]_4_4_SVC()                    | 0.807 (+/-0.098) | 0.857 (+/-0.013) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC()}                    |
+| [8, 32]_2_4_LogisticRegression()     | 0.803 (+/-0.090) | 0.815 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}     |
+| [8, 32]_2_6_LogisticRegression()     | 0.803 (+/-0.090) | 0.815 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}     |
+| [8, 32]_2_8_LogisticRegression()     | 0.803 (+/-0.090) | 0.815 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}     |
+| [8, 32]_2_4_SVC()                    | 0.802 (+/-0.094) | 0.820 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC()}                    |
+| [8, 32]_2_8_SVC()                    | 0.802 (+/-0.094) | 0.820 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC()}                    |
+| [8, 32]_2_6_SVC()                    | 0.802 (+/-0.094) | 0.820 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC()}                    |
+| [8, 32]_4_4_LogisticRegression()     | 0.796 (+/-0.092) | 0.825 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}     |
+| [8, 32]_4_6_LogisticRegression()     | 0.796 (+/-0.092) | 0.825 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}     |
+| [8, 32]_4_8_LogisticRegression()     | 0.796 (+/-0.092) | 0.825 (+/-0.014) | {'FBCSP__band': [8, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}     |
+| [8, 32]_2_6_SVC(kernel='poly')       | 0.795 (+/-0.086) | 0.811 (+/-0.016) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_2_4_SVC(kernel='poly')       | 0.795 (+/-0.086) | 0.811 (+/-0.016) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_2_8_SVC(kernel='poly')       | 0.795 (+/-0.086) | 0.811 (+/-0.016) | {'FBCSP__band': [8, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}       |
+| [8, 20, 32]_8_8_LogisticRegression() | 0.772 (+/-0.094) | 0.816 (+/-0.024) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| [8, 20, 32]_8_4_LogisticRegression() | 0.772 (+/-0.094) | 0.816 (+/-0.024) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| [8, 20, 32]_8_6_LogisticRegression() | 0.772 (+/-0.094) | 0.816 (+/-0.024) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| [8, 20, 32]_8_6_SVC()                | 0.769 (+/-0.091) | 0.843 (+/-0.022) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| [8, 20, 32]_8_8_SVC()                | 0.769 (+/-0.091) | 0.843 (+/-0.022) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| [8, 20, 32]_8_4_SVC()                | 0.769 (+/-0.091) | 0.843 (+/-0.022) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| [8, 20, 32]_4_4_LogisticRegression() | 0.766 (+/-0.105) | 0.801 (+/-0.020) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| [8, 20, 32]_4_8_LogisticRegression() | 0.766 (+/-0.105) | 0.801 (+/-0.020) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| [8, 20, 32]_4_6_LogisticRegression() | 0.766 (+/-0.105) | 0.801 (+/-0.020) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| [8, 20, 32]_4_4_SVC(kernel='poly')   | 0.763 (+/-0.094) | 0.817 (+/-0.020) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_4_8_SVC(kernel='poly')   | 0.763 (+/-0.094) | 0.817 (+/-0.020) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_4_6_SVC(kernel='poly')   | 0.763 (+/-0.094) | 0.817 (+/-0.020) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_4_6_SVC()                | 0.762 (+/-0.098) | 0.813 (+/-0.022) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| [8, 20, 32]_4_4_SVC()                | 0.762 (+/-0.098) | 0.813 (+/-0.022) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| [8, 20, 32]_4_8_SVC()                | 0.762 (+/-0.098) | 0.813 (+/-0.022) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 4, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| [8, 20, 32]_8_6_SVC(kernel='poly')   | 0.743 (+/-0.105) | 0.833 (+/-0.030) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_8_4_SVC(kernel='poly')   | 0.743 (+/-0.105) | 0.833 (+/-0.030) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_8_8_SVC(kernel='poly')   | 0.743 (+/-0.105) | 0.833 (+/-0.030) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_2_8_SVC()                | 0.718 (+/-0.101) | 0.782 (+/-0.030) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| [8, 20, 32]_2_6_SVC()                | 0.718 (+/-0.101) | 0.782 (+/-0.030) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| [8, 20, 32]_2_4_SVC()                | 0.718 (+/-0.101) | 0.782 (+/-0.030) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| [8, 20, 32]_2_8_LogisticRegression() | 0.716 (+/-0.102) | 0.748 (+/-0.035) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| [8, 20, 32]_2_6_LogisticRegression() | 0.716 (+/-0.102) | 0.748 (+/-0.035) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| [8, 20, 32]_2_4_LogisticRegression() | 0.716 (+/-0.102) | 0.748 (+/-0.035) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| [8, 20, 32]_2_6_SVC(kernel='poly')   | 0.711 (+/-0.096) | 0.760 (+/-0.041) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_2_4_SVC(kernel='poly')   | 0.711 (+/-0.096) | 0.760 (+/-0.041) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}   |
+| [8, 20, 32]_2_8_SVC(kernel='poly')   | 0.711 (+/-0.096) | 0.760 (+/-0.041) | {'FBCSP__band': [8, 20, 32], 'FBCSP__k': 2, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}   |
+| [8, 32]_8_4_SVC()                    | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}                    |
+| [8, 32]_8_4_LogisticRegression()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}     |
+| [8, 32]_8_4_SVC(kernel='poly')       | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_8_8_LogisticRegression()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}     |
+| [8, 32]_8_6_LogisticRegression()     | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}     |
+| [8, 32]_8_6_SVC(kernel='poly')       | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC(kernel='poly')}       |
+| [8, 32]_8_8_SVC()                    | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}                    |
+| [8, 32]_8_6_SVC()                    | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}                    |
+| [8, 32]_8_8_SVC(kernel='poly')       | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__band': [8, 32], 'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC(kernel='poly')}       |

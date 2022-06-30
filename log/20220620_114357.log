@@ -1,0 +1,11 @@
+## TangentSpace Mapping
+| abbr.                                             | test_score       | train_score      | params                                                                           |
+|---------------------------------------------------|------------------|------------------|----------------------------------------------------------------------------------|
+| TangentSpace()_SVC()                              | 0.738 (+/-0.049) | 0.911 (+/-0.006) | {'TangentSpace': TangentSpace(), 'classify': SVC()}                              |
+| TangentSpace()_SVC(kernel='poly')                 | 0.730 (+/-0.053) | 0.923 (+/-0.005) | {'TangentSpace': TangentSpace(), 'classify': SVC(kernel='poly')}                 |
+| TangentSpace()_LogisticRegression()               | 0.692 (+/-0.046) | 0.764 (+/-0.008) | {'TangentSpace': TangentSpace(), 'classify': LogisticRegression()}               |
+| TSFeatureExtractor()_SVC()                        | 0.689 (+/-0.059) | 0.760 (+/-0.021) | {'TangentSpace': TSFeatureExtractor(), 'classify': SVC()}                        |
+| TSFeatureExtractor()_LogisticRegression()         | 0.682 (+/-0.050) | 0.700 (+/-0.015) | {'TangentSpace': TSFeatureExtractor(), 'classify': LogisticRegression()}         |
+| TSFeatureExtractor()_LinearDiscriminantAnalysis() | 0.679 (+/-0.051) | 0.699 (+/-0.015) | {'TangentSpace': TSFeatureExtractor(), 'classify': LinearDiscriminantAnalysis()} |
+| TangentSpace()_LinearDiscriminantAnalysis()       | 0.678 (+/-0.046) | 0.764 (+/-0.007) | {'TangentSpace': TangentSpace(), 'classify': LinearDiscriminantAnalysis()}       |
+| TSFeatureExtractor()_SVC(kernel='poly')           | 0.645 (+/-0.055) | 0.718 (+/-0.028) | {'TangentSpace': TSFeatureExtractor(), 'classify': SVC(kernel='poly')}           |

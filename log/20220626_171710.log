@@ -1,0 +1,9 @@
+# orig_data & Leave1Out
+## Bagging FBCSP clf
+hard Bagging
+|   abbr. | test_score       | train_score      | params                                             |
+|---------|------------------|------------------|----------------------------------------------------|
+|    40.5 | 0.642 (+/-0.092) | 0.784 (+/-0.032) | {'rf__fbcsp__n_components': 4, 'svm__svc__C': 0.5} |
+|    60.6 | 0.618 (+/-0.093) | 0.787 (+/-0.020) | {'rf__fbcsp__n_components': 6, 'svm__svc__C': 0.6} |
+|    60.5 | 0.617 (+/-0.081) | 0.791 (+/-0.032) | {'rf__fbcsp__n_components': 6, 'svm__svc__C': 0.5} |
+|    40.6 | 0.614 (+/-0.107) | 0.787 (+/-0.035) | {'rf__fbcsp__n_components': 4, 'svm__svc__C': 0.6} |

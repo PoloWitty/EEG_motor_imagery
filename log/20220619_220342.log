@@ -1,0 +1,8 @@
+Tangent space Classification accuracy: 0.742250 / Chance level: 0.500000
+
+clf = make_pipeline(
+    # SPoC(nfilter=4,log=False),
+    TangentSpace(metric="riemann"),
+    # LogisticRegression(),
+    SVC()
+)

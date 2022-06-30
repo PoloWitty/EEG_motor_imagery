@@ -1,0 +1,91 @@
+# ea & Leave2Out
+## TangentSpace Mapping
+| abbr.                                             | test_score       | train_score      | params                                                                           |
+|---------------------------------------------------|------------------|------------------|----------------------------------------------------------------------------------|
+| TSFeatureExtractor()_SVC(kernel='poly')           | 0.518 (+/-0.033) | 0.700 (+/-0.069) | {'TangentSpace': TSFeatureExtractor(), 'classify': SVC(kernel='poly')}           |
+| TangentSpace()_SVC(kernel='poly')                 | 0.501 (+/-0.002) | 0.636 (+/-0.042) | {'TangentSpace': TangentSpace(), 'classify': SVC(kernel='poly')}                 |
+| TangentSpace()_LogisticRegression()               | 0.500 (+/-0.001) | 0.803 (+/-0.026) | {'TangentSpace': TangentSpace(), 'classify': LogisticRegression()}               |
+| TangentSpace()_LinearDiscriminantAnalysis()       | 0.500 (+/-0.001) | 0.834 (+/-0.037) | {'TangentSpace': TangentSpace(), 'classify': LinearDiscriminantAnalysis()}       |
+| TSFeatureExtractor()_SVC()                        | 0.500 (+/-0.000) | 0.735 (+/-0.074) | {'TangentSpace': TSFeatureExtractor(), 'classify': SVC()}                        |
+| TSFeatureExtractor()_LogisticRegression()         | 0.500 (+/-0.000) | 0.687 (+/-0.055) | {'TangentSpace': TSFeatureExtractor(), 'classify': LogisticRegression()}         |
+| TSFeatureExtractor()_LinearDiscriminantAnalysis() | 0.500 (+/-0.000) | 0.693 (+/-0.055) | {'TangentSpace': TSFeatureExtractor(), 'classify': LinearDiscriminantAnalysis()} |
+| TangentSpace()_SVC()                              | 0.500 (+/-0.000) | 0.652 (+/-0.078) | {'TangentSpace': TangentSpace(), 'classify': SVC()}                              |
+## CSP + classifier
+| abbr.                                     | test_score       | train_score      | params                                                                                     |
+|-------------------------------------------|------------------|------------------|--------------------------------------------------------------------------------------------|
+| riemann_6_LogisticRegression()            | 0.509 (+/-0.014) | 0.672 (+/-0.024) | {'CSP__metric': 'riemann', 'CSP__nfilter': 6, 'classify': LogisticRegression()}            |
+| euclid_5_GaussianNB(priors=[0.5, 0.5])    | 0.509 (+/-0.020) | 0.620 (+/-0.040) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': GaussianNB(priors=[0.5, 0.5])}    |
+| logeuclid_4_LinearDiscriminantAnalysis()  | 0.509 (+/-0.032) | 0.581 (+/-0.031) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': LinearDiscriminantAnalysis()}  |
+| riemann_7_LogisticRegression()            | 0.503 (+/-0.007) | 0.673 (+/-0.024) | {'CSP__metric': 'riemann', 'CSP__nfilter': 7, 'classify': LogisticRegression()}            |
+| riemann_4_LogisticRegression()            | 0.502 (+/-0.005) | 0.652 (+/-0.013) | {'CSP__metric': 'riemann', 'CSP__nfilter': 4, 'classify': LogisticRegression()}            |
+| euclid_7_LogisticRegression()             | 0.502 (+/-0.005) | 0.682 (+/-0.022) | {'CSP__metric': 'euclid', 'CSP__nfilter': 7, 'classify': LogisticRegression()}             |
+| riemann_4_SVC()                           | 0.502 (+/-0.004) | 0.688 (+/-0.035) | {'CSP__metric': 'riemann', 'CSP__nfilter': 4, 'classify': SVC()}                           |
+| logeuclid_8_SVC()                         | 0.502 (+/-0.004) | 0.590 (+/-0.049) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 8, 'classify': SVC()}                         |
+| euclid_4_LogisticRegression()             | 0.501 (+/-0.002) | 0.640 (+/-0.056) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': LogisticRegression()}             |
+| euclid_4_LinearDiscriminantAnalysis()     | 0.501 (+/-0.002) | 0.635 (+/-0.062) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': LinearDiscriminantAnalysis()}     |
+| logeuclid_7_LogisticRegression()          | 0.501 (+/-0.002) | 0.580 (+/-0.037) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 7, 'classify': LogisticRegression()}          |
+| logeuclid_5_LogisticRegression()          | 0.501 (+/-0.002) | 0.568 (+/-0.027) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': LogisticRegression()}          |
+| logeuclid_7_SVC()                         | 0.500 (+/-0.001) | 0.595 (+/-0.051) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 7, 'classify': SVC()}                         |
+| logeuclid_6_LogisticRegression()          | 0.500 (+/-0.005) | 0.571 (+/-0.036) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': LogisticRegression()}          |
+| euclid_4_GaussianNB(priors=[0.5, 0.5])    | 0.500 (+/-0.001) | 0.618 (+/-0.036) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': GaussianNB(priors=[0.5, 0.5])}    |
+| logeuclid_4_LogisticRegression()          | 0.500 (+/-0.004) | 0.550 (+/-0.030) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': LogisticRegression()}          |
+| euclid_8_SVC()                            | 0.500 (+/-0.000) | 0.724 (+/-0.037) | {'CSP__metric': 'euclid', 'CSP__nfilter': 8, 'classify': SVC()}                            |
+| euclid_4_SVC(C=0.8)                       | 0.500 (+/-0.000) | 0.689 (+/-0.039) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': SVC(C=0.8)}                       |
+| euclid_5_SVC(C=0.8)                       | 0.500 (+/-0.000) | 0.696 (+/-0.039) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': SVC(C=0.8)}                       |
+| euclid_8_LogisticRegression()             | 0.500 (+/-0.000) | 0.682 (+/-0.034) | {'CSP__metric': 'euclid', 'CSP__nfilter': 8, 'classify': LogisticRegression()}             |
+| euclid_5_LinearDiscriminantAnalysis()     | 0.500 (+/-0.000) | 0.640 (+/-0.056) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': LinearDiscriminantAnalysis()}     |
+| euclid_6_GaussianNB(priors=[0.5, 0.5])    | 0.500 (+/-0.000) | 0.643 (+/-0.036) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': GaussianNB(priors=[0.5, 0.5])}    |
+| euclid_7_SVC()                            | 0.500 (+/-0.000) | 0.723 (+/-0.044) | {'CSP__metric': 'euclid', 'CSP__nfilter': 7, 'classify': SVC()}                            |
+| euclid_6_SVC()                            | 0.500 (+/-0.000) | 0.719 (+/-0.041) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': SVC()}                            |
+| euclid_5_SVC()                            | 0.500 (+/-0.000) | 0.698 (+/-0.034) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': SVC()}                            |
+| euclid_6_SVC(C=0.8)                       | 0.500 (+/-0.000) | 0.717 (+/-0.041) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': SVC(C=0.8)}                       |
+| riemann_7_SVC()                           | 0.500 (+/-0.000) | 0.677 (+/-0.036) | {'CSP__metric': 'riemann', 'CSP__nfilter': 7, 'classify': SVC()}                           |
+| euclid_4_SVC()                            | 0.500 (+/-0.000) | 0.695 (+/-0.035) | {'CSP__metric': 'euclid', 'CSP__nfilter': 4, 'classify': SVC()}                            |
+| riemann_6_SVC()                           | 0.500 (+/-0.000) | 0.682 (+/-0.035) | {'CSP__metric': 'riemann', 'CSP__nfilter': 6, 'classify': SVC()}                           |
+| euclid_6_LogisticRegression()             | 0.500 (+/-0.003) | 0.678 (+/-0.025) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': LogisticRegression()}             |
+| riemann_5_LogisticRegression()            | 0.500 (+/-0.000) | 0.660 (+/-0.031) | {'CSP__metric': 'riemann', 'CSP__nfilter': 5, 'classify': LogisticRegression()}            |
+| riemann_8_SVC()                           | 0.500 (+/-0.000) | 0.674 (+/-0.030) | {'CSP__metric': 'riemann', 'CSP__nfilter': 8, 'classify': SVC()}                           |
+| logeuclid_6_SVC(C=0.8)                    | 0.500 (+/-0.001) | 0.586 (+/-0.035) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': SVC(C=0.8)}                    |
+| logeuclid_5_SVC(C=0.8)                    | 0.499 (+/-0.004) | 0.589 (+/-0.031) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': SVC(C=0.8)}                    |
+| riemann_8_LogisticRegression()            | 0.499 (+/-0.001) | 0.689 (+/-0.019) | {'CSP__metric': 'riemann', 'CSP__nfilter': 8, 'classify': LogisticRegression()}            |
+| logeuclid_6_SVC()                         | 0.498 (+/-0.004) | 0.592 (+/-0.040) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': SVC()}                         |
+| riemann_5_SVC()                           | 0.498 (+/-0.005) | 0.683 (+/-0.040) | {'CSP__metric': 'riemann', 'CSP__nfilter': 5, 'classify': SVC()}                           |
+| logeuclid_5_SVC()                         | 0.498 (+/-0.004) | 0.589 (+/-0.027) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': SVC()}                         |
+| logeuclid_4_GaussianNB(priors=[0.5, 0.5]) | 0.497 (+/-0.003) | 0.548 (+/-0.024) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': GaussianNB(priors=[0.5, 0.5])} |
+| euclid_5_LogisticRegression()             | 0.497 (+/-0.006) | 0.645 (+/-0.056) | {'CSP__metric': 'euclid', 'CSP__nfilter': 5, 'classify': LogisticRegression()}             |
+| logeuclid_8_LogisticRegression()          | 0.497 (+/-0.005) | 0.576 (+/-0.043) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 8, 'classify': LogisticRegression()}          |
+| logeuclid_5_GaussianNB(priors=[0.5, 0.5]) | 0.497 (+/-0.007) | 0.550 (+/-0.024) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': GaussianNB(priors=[0.5, 0.5])} |
+| euclid_6_LinearDiscriminantAnalysis()     | 0.495 (+/-0.008) | 0.674 (+/-0.024) | {'CSP__metric': 'euclid', 'CSP__nfilter': 6, 'classify': LinearDiscriminantAnalysis()}     |
+| logeuclid_5_LinearDiscriminantAnalysis()  | 0.494 (+/-0.013) | 0.600 (+/-0.034) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5, 'classify': LinearDiscriminantAnalysis()}  |
+| logeuclid_4_SVC(C=0.8)                    | 0.494 (+/-0.015) | 0.585 (+/-0.028) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': SVC(C=0.8)}                    |
+| logeuclid_4_SVC()                         | 0.493 (+/-0.016) | 0.590 (+/-0.028) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4, 'classify': SVC()}                         |
+| logeuclid_6_GaussianNB(priors=[0.5, 0.5]) | 0.493 (+/-0.015) | 0.552 (+/-0.026) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': GaussianNB(priors=[0.5, 0.5])} |
+| logeuclid_6_LinearDiscriminantAnalysis()  | 0.492 (+/-0.022) | 0.612 (+/-0.031) | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6, 'classify': LinearDiscriminantAnalysis()}  |
+## FBCSP + classifier
+
+| abbr.                     | test_score       | train_score      | params                                                                       |
+|---------------------------|------------------|------------------|------------------------------------------------------------------------------|
+| 24_8_LogisticRegression() | 0.504 (+/-0.008) | 0.706 (+/-0.019) | {'FBCSP__k': 24, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| 24_4_LogisticRegression() | 0.504 (+/-0.008) | 0.706 (+/-0.019) | {'FBCSP__k': 24, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| 24_6_LogisticRegression() | 0.504 (+/-0.008) | 0.706 (+/-0.019) | {'FBCSP__k': 24, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| 16_8_SVC()                | 0.500 (+/-0.000) | 0.732 (+/-0.021) | {'FBCSP__k': 16, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| 8_4_SVC()                 | 0.500 (+/-0.000) | 0.687 (+/-0.041) | {'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': SVC()}                 |
+| 24_8_SVC()                | 0.500 (+/-0.000) | 0.750 (+/-0.023) | {'FBCSP__k': 24, 'FBCSP__n_components': 8, 'classify': SVC()}                |
+| 8_6_SVC()                 | 0.500 (+/-0.000) | 0.687 (+/-0.041) | {'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': SVC()}                 |
+| 8_8_SVC()                 | 0.500 (+/-0.000) | 0.687 (+/-0.041) | {'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': SVC()}                 |
+| 16_4_LogisticRegression() | 0.500 (+/-0.000) | 0.676 (+/-0.030) | {'FBCSP__k': 16, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| 16_4_SVC()                | 0.500 (+/-0.000) | 0.732 (+/-0.021) | {'FBCSP__k': 16, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| 16_6_LogisticRegression() | 0.500 (+/-0.000) | 0.676 (+/-0.030) | {'FBCSP__k': 16, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| 16_6_SVC()                | 0.500 (+/-0.000) | 0.732 (+/-0.021) | {'FBCSP__k': 16, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| 16_8_LogisticRegression() | 0.500 (+/-0.000) | 0.676 (+/-0.030) | {'FBCSP__k': 16, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| 24_6_SVC()                | 0.500 (+/-0.000) | 0.750 (+/-0.023) | {'FBCSP__k': 24, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| 24_4_SVC()                | 0.500 (+/-0.000) | 0.750 (+/-0.023) | {'FBCSP__k': 24, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| 8_4_LogisticRegression()  | 0.500 (+/-0.001) | 0.620 (+/-0.046) | {'FBCSP__k': 8, 'FBCSP__n_components': 4, 'classify': LogisticRegression()}  |
+| 8_8_LogisticRegression()  | 0.500 (+/-0.001) | 0.620 (+/-0.046) | {'FBCSP__k': 8, 'FBCSP__n_components': 8, 'classify': LogisticRegression()}  |
+| 8_6_LogisticRegression()  | 0.500 (+/-0.001) | 0.620 (+/-0.046) | {'FBCSP__k': 8, 'FBCSP__n_components': 6, 'classify': LogisticRegression()}  |
+| 32_4_LogisticRegression() | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 4, 'classify': LogisticRegression()} |
+| 32_4_SVC()                | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 4, 'classify': SVC()}                |
+| 32_6_LogisticRegression() | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 6, 'classify': LogisticRegression()} |
+| 32_6_SVC()                | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 6, 'classify': SVC()}                |
+| 32_8_LogisticRegression() | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 8, 'classify': LogisticRegression()} |
+| 32_8_SVC()                | nan (+/-nan)     | nan (+/-nan)     | {'FBCSP__k': 32, 'FBCSP__n_components': 8, 'classify': SVC()}                |

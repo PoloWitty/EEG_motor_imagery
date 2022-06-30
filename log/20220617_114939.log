@@ -1,0 +1,11 @@
+| abbr.       | params                                          |   mean_test_score |   std_test_score |
+|-------------|-------------------------------------------------|-------------------|------------------|
+| logeuclid_4 | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 4} |            0.8    |        0.0827647 |
+| riemann_5   | {'CSP__metric': 'riemann', 'CSP__nfilter': 5}   |            0.798  |        0.0809074 |
+| riemann_4   | {'CSP__metric': 'riemann', 'CSP__nfilter': 4}   |            0.7975 |        0.0861322 |
+| logeuclid_5 | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 5} |            0.7945 |        0.0845266 |
+| logeuclid_6 | {'CSP__metric': 'logeuclid', 'CSP__nfilter': 6} |            0.7945 |        0.0845266 |
+| euclid_6    | {'CSP__metric': 'euclid', 'CSP__nfilter': 6}    |            0.7945 |        0.0854093 |
+| euclid_5    | {'CSP__metric': 'euclid', 'CSP__nfilter': 5}    |            0.7925 |        0.085257  |
+| euclid_4    | {'CSP__metric': 'euclid', 'CSP__nfilter': 4}    |            0.788  |        0.0787782 |
+| riemann_6   | {'CSP__metric': 'riemann', 'CSP__nfilter': 6}   |            0.786  |        0.0860465 |

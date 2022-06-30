@@ -1,0 +1,5 @@
+# ra & Leave1Out
+## hard Bagging FBCSP clf
+|   abbr. | test_score       | train_score      | params                        |
+|---------|------------------|------------------|-------------------------------|
+|       6 | 0.639 (+/-0.109) | 0.784 (+/-0.006) | {'0__fbcsp__n_components': 6} |

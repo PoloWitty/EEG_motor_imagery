@@ -1,0 +1,9 @@
+## tangentSpace mapping
+| abbr.                               | test_score       | train_score      | params                                                                       |
+|-------------------------------------|------------------|------------------|------------------------------------------------------------------------------|
+| True_SVC()                          | 0.742 (+/-0.047) | 0.912 (+/-0.005) | {'TangentSpace__tsupdate': True, 'classify': SVC()}                          |
+| False_SVC()                         | 0.741 (+/-0.045) | 0.912 (+/-0.005) | {'TangentSpace__tsupdate': False, 'classify': SVC()}                         |
+| True_LogisticRegression()           | 0.694 (+/-0.049) | 0.765 (+/-0.007) | {'TangentSpace__tsupdate': True, 'classify': LogisticRegression()}           |
+| False_LogisticRegression()          | 0.693 (+/-0.050) | 0.765 (+/-0.007) | {'TangentSpace__tsupdate': False, 'classify': LogisticRegression()}          |
+| False_GaussianNB(priors=[0.5, 0.5]) | 0.642 (+/-0.047) | 0.702 (+/-0.010) | {'TangentSpace__tsupdate': False, 'classify': GaussianNB(priors=[0.5, 0.5])} |
+| True_GaussianNB(priors=[0.5, 0.5])  | 0.639 (+/-0.049) | 0.702 (+/-0.010) | {'TangentSpace__tsupdate': True, 'classify': GaussianNB(priors=[0.5, 0.5])}  |
